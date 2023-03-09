@@ -47,7 +47,7 @@ public class TestRunner extends baseclass{
             currentpage.GetInstance(DLPHomePage.class).Search_collection();
             
             System.out.println("Test Completed successfully");
-    		test.log(LogStatus.PASS, "Test case", "Pass");
+    		test.log(LogStatus.PASS, "Test case 1", "Pass");
             
 		}
 		
@@ -72,7 +72,7 @@ public class TestRunner extends baseclass{
             currentpage.GetInstance(DLPHomePage.class).Search_collection();
             
             System.out.println("Test Completed successfully");
-    		test.log(LogStatus.PASS, "Test case", "Pass");
+    		test.log(LogStatus.PASS, "Test case 2", "Pass");
             
 		}
 		

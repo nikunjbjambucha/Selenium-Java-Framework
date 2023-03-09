@@ -21,6 +21,15 @@ public class DLPHomePage extends basepage{
 	@FindBy(how = How.ID, using = "navbarDropdown") 
 	private WebElement MordernUploadMethods;
 	
+	@FindBy(how = How.XPATH, using = ".//div[@id='navbarNav']/ul/li[1]/ul/li[1]") 
+	private WebElement WebSocket;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@id='navbarNav']/ul/li[1]/ul/li[2]") 
+	private WebElement HTML;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@id='navbarNav']/ul/li[1]/ul/li[3]") 
+	private WebElement JQUERY;
+	
 	
 	public void Search_collection() {	
 		Assert.assertTrue(MordernUploadMethods.isDisplayed());

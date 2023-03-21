@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import org.openqa.selenium.chrome.ChromeOptions;
 import Base.*;
 import dataProvider.ConfigFileReader;
 import pageObjects.*;
@@ -26,8 +27,10 @@ public class TestRunner extends baseclass{
 			
 			case Chrome:
 				// declaration and chromedriver
+				ChromeOptions option = new ChromeOptions();
+				option.addArguments("--remote-allow-origins=*");
 				System.setProperty("webdriver.chrome.driver",chromePath);
-				driver = new ChromeDriver();
+				driver = new ChromeDriver(option);
 		        driver.manage().window().maximize();
 		        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		        System.out.println("Browser has been opened");
